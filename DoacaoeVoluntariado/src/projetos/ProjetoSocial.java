@@ -47,8 +47,6 @@ public class ProjetoSocial {
 	}
 
 
-
-
     public void adicionarVoluntario(Voluntario v) {
         voluntarios.add(v);
     }
@@ -88,6 +86,13 @@ public class ProjetoSocial {
 
     public void exibirInfo() {
         System.out.println("\n=== PROJETO: " + nome + " ===");
+        String valido;
+		if(validado) {
+			valido = "Validado";
+		}else {
+			valido="Não validado";
+		}
+		System.out.println("Situação: "+ valido);
         System.out.println("Descrição: " + descricao);
         System.out.println("Prioridade: " + prioridade);
         System.out.println("Data: " + dataCadastro);
@@ -122,8 +127,7 @@ public class ProjetoSocial {
 			valido="Nao validado";
 		}
 		return "Projeto: " + nome +
-		           " | Descrição: " + descricao+
-		           "Situação: "+ valido;
+		           " | Descrição: " + descricao;
 	}
 }
 
