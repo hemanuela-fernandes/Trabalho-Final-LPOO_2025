@@ -72,7 +72,6 @@ public class Teste {
     	double meta = 0.0;
     	while (true) {
     	    try {
-    	        System.out.print("Digite a meta (valor decimal): ");
     	        String entrada = sc.nextLine();
 
     	        meta = Double.parseDouble(entrada);  // tenta converter para double
@@ -87,18 +86,17 @@ public class Teste {
     }
     
     private static int intValido() {
-    	int prioridade;
+    	int inteiro;
         while (true) {
-            System.out.print("Prioridade (número inteiro): ");
 
             try {
                 String entrada = sc.nextLine();
 
                 // tenta converter para inteiro
-                prioridade = Integer.parseInt(entrada);
+                inteiro = Integer.parseInt(entrada);
 
                 // se chegou aqui, é válido → sai do while
-                return prioridade;
+                return inteiro;
 
             } catch (NumberFormatException e) {
                 System.out.println("Valor inválido! Digite apenas números inteiros.");
@@ -162,7 +160,7 @@ public class Teste {
         System.out.print("Descrição: ");
         String desc = sc.nextLine();      
         
-        
+        System.out.println("Prioridade: ");
         int prioridade = intValido();
 
 
@@ -175,7 +173,6 @@ public class Teste {
         if (tipo == 1) {
             System.out.print("Meta R$: ");
             double meta = doubleValido();
-            System.out.print("Digite a meta (valor decimal): ");
 
             p = new ProjetoSocial(nome, desc, prioridade, meta);
 
