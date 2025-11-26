@@ -11,6 +11,7 @@ public class Admin {
 
     
     public boolean autenticar(String codigo) throws Exception {
+    	//tratamento da entrada do código
         try {
             if (codigo == null || codigo.isEmpty()) {
                 throw new IllegalArgumentException("Código não pode ser vazio.");

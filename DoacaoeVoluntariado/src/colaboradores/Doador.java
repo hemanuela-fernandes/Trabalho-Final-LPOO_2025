@@ -1,10 +1,8 @@
 package colaboradores;
 
 import java.util.*;
-import projetos.Doacao;
-import projetos.ProjetoSocial;
 
-public class Doador extends Pessoa {
+public class Doador extends Pessoa implements Cadastro{
 
     private List<Doacao> doacoes = new ArrayList<>();
     private ProjetoSocial projeto;
@@ -27,5 +25,10 @@ public class Doador extends Pessoa {
     @Override
     public void exibirPerfil() {
         System.out.println("Doador: " + nome + " | CPF: " + CPF);
+    }
+    
+    @Override
+    public void cadastrar() {
+        System.out.println("Cadastro do Doador realizado com sucesso!");
     }
 }
