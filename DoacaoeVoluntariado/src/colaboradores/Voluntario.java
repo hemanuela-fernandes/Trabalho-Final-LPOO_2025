@@ -1,8 +1,6 @@
 package colaboradores;
 
-import projetos.ProjetoSocial;
-
-public class Voluntario extends Pessoa {
+public class Voluntario extends Pessoa implements Cadastro{
 
     private String disponibilidade;
     private String acao;
@@ -22,5 +20,10 @@ public class Voluntario extends Pessoa {
     @Override
     public void exibirPerfil() {
         System.out.println("Voluntário: " + nome + " | Ação: " + acao);
+    }
+    
+    @Override
+    public void cadastrar() {
+        System.out.println("Cadastro de Voluntário realizado com sucesso!");
     }
 }
